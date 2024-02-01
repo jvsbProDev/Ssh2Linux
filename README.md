@@ -8,7 +8,7 @@ Simple SSH Connection to Linux Server
 ```bash
 username : lnxComputer
 password : password123
-ip addr : 192.168.123.789
+ip addr  : 192.168.123.789
 ```
 
 > Installation :
