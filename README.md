@@ -16,7 +16,7 @@ ip addr  : 192.168.123.789
 sudo apt-get install openssh-server
 ```
 
-*Note :*
+**Note :**
 
 _sudo_ in Linux stands for "superuser do." It's a command that allows users to execute commands with the security privileges of another user, usually the superuser (root).
 
@@ -40,7 +40,7 @@ sudo systemctl enable ssh
 sudo ufw allow 22
 sudo ufw enable
 ```
-*Note :*
+**Note :**
 
 _ufw_ stands for Uncomplicated Firewall, it set up rules to allow or deny traffic based on ports, IP addresses, or protocols.
 
