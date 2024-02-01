@@ -43,6 +43,7 @@ sudo systemctl status ssh
 
 > Command Prompt (Windows) :
 ```bash
+ssh -p <port> <username>@<ip address>
 ssh -p 22 lxnComputer@192.168.123.789
 ```
 
