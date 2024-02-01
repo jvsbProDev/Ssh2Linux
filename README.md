@@ -6,7 +6,7 @@ Simple SSH Connection to Linux Server
 
 > Linux Server Credentials :
 ```bash
-user : userName
+username : lnxComputer
 password : password123
 inet (IP Address) : 192.168.123.789
 ```
@@ -27,7 +27,7 @@ PasswordAuthentication yes
 UsePAM yes
 ```
 
-> Start up the server and enable port :
+> Start up the server and enable port 22 :
 ```bash
 sudo systemctl start ssh
 sudo systemctl enable ssh
@@ -41,7 +41,7 @@ sudo systemctl restart ssh
 sudo systemctl status ssh
 ```
 
-> Shutdown server and disable port :
+> Shutdown server and disable port 22 :
 ```bash
 sudo ufw disable
 sudo ufw delete allow 22
