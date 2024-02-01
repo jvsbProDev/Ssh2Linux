@@ -1,4 +1,5 @@
-# Ssh2Linux
-
-<img src="banner.gif" align="center"><br>
+<h1 align="center">Ssh2Linux<br>
+<img src="banner.gif"><br>
+</h1>
+  
 Simple SSH Connection to Linux Server
