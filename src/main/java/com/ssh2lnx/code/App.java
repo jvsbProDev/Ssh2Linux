@@ -11,7 +11,7 @@ import java.io.InputStream;
  */
 public class App {
     private static String host = "192.168.123.789";
-    private static String user = "userName";
+    private static String user = "lnxComputer";
     private static String password = "password123";
 
     public static void main(String[] args) throws Throwable {
