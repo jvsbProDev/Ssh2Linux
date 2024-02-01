@@ -20,7 +20,7 @@ sudo apt-get install openssh-server
 ```bash
 sudo nano /etc/ssh/sshd_config
 ```
-> Enable the following (un-comment #) :
+> Enable (un-comment #) the following :
 ```
 Port 22
 PasswordAuthentication yes
