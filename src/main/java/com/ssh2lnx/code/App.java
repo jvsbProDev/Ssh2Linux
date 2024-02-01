@@ -16,7 +16,7 @@ public class App {
 
     public static void main(String[] args) throws Throwable {
         System.out.println("Connecting to LINUX server...");
-		String output = runCommandOutput("uname");
+	String output = runCommandOutput("uname");
         System.out.println(output);
     }
 
@@ -26,7 +26,7 @@ public class App {
             JSch jsch = new JSch();
             Session session = jsch.getSession(user, host, 22);
             connectSession(session);
-            commandSessionOutput(session, command);
+            output = commandSessionOutput(session, command);
             session.disconnect();
             //System.out.println("Disconnected...");
         } catch (Exception e) {
@@ -40,7 +40,7 @@ public class App {
             session.setPassword(password);
             java.util.Properties config = new java.util.Properties();
             config.put("StrictHostKeyChecking", "no");
-			//config.put("PreferredAuthentications", password);
+	    //config.put("PreferredAuthentications", password);
             session.setConfig(config);
             session.connect();
             //System.out.println("Connected to Host: " + host);
@@ -64,7 +64,7 @@ public class App {
             while (in.available() > 0) {
                 int i = in.read(tmp, 0, 1024);
                 if (i < 0) break;
-                System.out.print(new String(tmp, 0, i));
+                //System.out.print(new String(tmp, 0, i));
                 outputBuilder.append(new String(tmp, 0, i));
             }
             if (channel.isClosed()) {
