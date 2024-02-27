@@ -9,6 +9,7 @@ import java.io.InputStream;
  * Title:  Simple SSH Connection to Linux Server
  * Author: Jovi Van Shannon Belnas
  */
+
 public class SSHCommand {
     private static String host = "192.168.123.789";
     private static String user = "lnxComputer";
