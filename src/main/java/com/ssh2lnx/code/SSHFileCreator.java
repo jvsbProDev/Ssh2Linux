@@ -4,6 +4,11 @@ import com.jcraft.jsch.*;
 
 import java.io.*;
 
+/**
+ * Title:  Simple SSH File Creator to Linux Server
+ * Author: Jovi Van Shannon Belnas
+ */
+
 public class SSHFileCreator {
     private static String host = "192.168.123.789";
     private static String user = "lnxComputer";
