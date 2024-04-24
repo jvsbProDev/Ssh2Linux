@@ -28,7 +28,8 @@ Configuration
 ```bash
 sudo nano /etc/ssh/sshd_config
 ```
-> Enable (un-comment #) the following (Linux) :
+Enable (un-comment #) the following
+> Terminal (Linux) :
 ```
 Port 22
 PasswordAuthentication yes
