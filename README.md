@@ -11,7 +11,8 @@ password : password123
 ip addr  : 192.168.123.456
 ```
 
-> Installation (Linux) :
+Installation
+> Terminal (Linux) :
 ```bash
 sudo apt-get install openssh-server
 ```
