@@ -77,6 +77,6 @@ scp lnxComputer@192.168.123.456:/home/lxnComputer/Desktop/sample.txt "C:\\Users\
 To copy a directory with files from a Linux server to a Windows PC using command-line tools like scp, you can utilize the -r option to recursively copy directories
 > Command Prompt (Windows) :
 ```bash
-scp -r <username>@<ip address>:/home/lxnComputer/directoryPath/tutsh4x "C:\\Users\\winComputer\\directoryPath\\tutsh4x"
+scp -r <username>@<ip address>:/home/lxnComputer/directoryPath/lxnDir "C:\\Users\\winComputer\\directoryPath\\winDir"
 scp -r lnxComputer@192.168.123.456:/home/lxnComputer/Documents/tutsh4x "C:\\Users\\winComputer\\Desktop\\tutsh4x"
 ```
