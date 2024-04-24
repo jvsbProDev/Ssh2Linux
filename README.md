@@ -4,7 +4,7 @@
   
 Simple SSH Connection to Linux Server
 
-> Linux Server Credentials (Linux) :
+> Linux Server Credentials :
 ```bash
 username : lnxComputer
 password : password123
