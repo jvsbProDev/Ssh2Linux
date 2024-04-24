@@ -65,3 +65,18 @@ sudo ufw delete allow 22
 sudo systemctl disable ssh
 sudo systemctl stop ssh
 ```
+
+**Note :**
+To copy a file from a Linux server to a Windows PC using command-line tools, you can utilize scp (Secure Copy Protocol)
+> Command Prompt (Windows) :
+```bash
+scp <username>@<ip address>:/home/lxnComputer/directoryPath/sample.txt "C:\\Users\\winComputer\\directoryPath\\sample.txt"
+scp lnxComputer@192.168.123.456:/home/lxnComputer/Desktop/sample.txt "C:\\Users\\winComputer\\Desktop\\sample.txt"
+```
+
+To copy a directory with files from a Linux server to a Windows PC using command-line tools like scp, you can utilize the -r option to recursively copy directories
+> Command Prompt (Windows) :
+```bash
+scp -r <username>@<ip address>:/home/lxnComputer/directoryPath/tutsh4x "C:\\Users\\winComputer\\directoryPath\\tutsh4x"
+scp -r lnxComputer@192.168.123.456:/home/lxnComputer/Documents/tutsh4x "C:\\Users\\winComputer\\Desktop\\tutsh4x"
+```
