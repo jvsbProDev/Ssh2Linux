@@ -57,6 +57,7 @@ sudo systemctl restart ssh
 sudo systemctl status ssh
 ```
 
+use SSH (Secure Shell) command to connect to a remote computer
 > Command Prompt (Windows) :
 ```bash
 ssh -p <port> <username>@<ip address>
