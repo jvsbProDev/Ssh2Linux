@@ -8,7 +8,7 @@ Simple SSH Connection to Linux Server
 ```bash
 username : lnxComputer
 password : password123
-ip addr  : 192.168.123.789
+ip addr  : 192.168.123.456
 ```
 
 > Installation :
@@ -55,7 +55,7 @@ sudo systemctl status ssh
 > Command Prompt (Windows) :
 ```bash
 ssh -p <port> <username>@<ip address>
-ssh -p 22 lxnComputer@192.168.123.789
+ssh -p 22 lxnComputer@192.168.123.456
 ```
 
 > Shutdown server and disable port 22 :
