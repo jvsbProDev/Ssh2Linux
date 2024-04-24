@@ -67,6 +67,7 @@ sudo systemctl stop ssh
 ```
 
 **Note :**
+
 To copy a file from a Linux server to a Windows PC using command-line tools, you can utilize scp (Secure Copy Protocol)
 > Command Prompt (Windows) :
 ```bash
