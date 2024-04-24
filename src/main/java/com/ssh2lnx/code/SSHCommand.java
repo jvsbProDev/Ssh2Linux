@@ -11,7 +11,7 @@ import java.io.InputStream;
  */
 
 public class SSHCommand {
-    private static String host = "192.168.123.789";
+    private static String host = "192.168.123.456";
     private static String user = "lnxComputer";
     private static String password = "password123";
 
