@@ -1,92 +1,40 @@
 <h1 align="center">Ssh2Linux<br>
 <img src="banner.gif" style="width: 50%"><br>
 </h1>
-  
-**Simple SSH Connection to Linux Server**
 
-> Linux Server Credentials :
 ```bash
-username : lnxComputer
-password : password123
-ip addr  : 192.168.123.456
+.
+└───src
+    └───main
+        └───java
+            └───com
+                └───ssh2lnx
+                    └───code
+                            SFTPFileTransfer.java
+                            SSHCommandExecutor.java
+                            SSHConnection.java
+                            SSHConnectionImpl.java
+                            SSHConstants.java
+                            SSHMain.java
 ```
 
-Installation
-> Terminal (Linux) :
-```bash
-sudo apt-get install openssh-server
-```
+Single Responsibility Principle (SRP) :
 
-**Note :**
++ Moved constants to `SSHConstants` for a single source of truth and reusability.
++ Created separate classes for SSH connection, command execution, and file transfer.
 
-`sudo` in Linux stands for "superuser do." It's a command that allows users to execute commands with the security privileges of another user, usually the superuser (`root`).
+Open/Closed Principle (OCP) :
 
-This allows users to perform administrative tasks without logging in as the root user directly, users can execute commands or run programs that require elevated permissions.
++ Interfaces (`SSHConnection`) allow new implementations without modifying existing code.
 
-Configuration
-> Terminal (Linux) :
-```bash
-sudo nano /etc/ssh/sshd_config
-```
-Enable (un-comment #) the following
-> Terminal (Linux) :
-```
-Port 22
-PasswordAuthentication yes
-UsePAM yes
-```
+Liskov Substitution Principle (LSP) :
 
-Start up the server and enable port 22
-> Terminal (Linux) :
-```bash
-sudo systemctl start ssh
-sudo systemctl enable ssh
-sudo ufw allow 22
-sudo ufw enable
-```
-**Note :**
++ The `SSHConnectionImpl` class adheres to the `SSHConnection` interface, ensuring it can be substituted.
 
-`ufw` stands for _Uncomplicated Firewall_, it set up rules to allow or deny traffic based on ports, IP addresses, or protocols.
+Interface Segregation Principle (ISP) :
 
-`systemctl` is a command-line utility in Linux systems that is used to start, stop, restart, enable, disable, reload, and check the status of system services.
++ Smaller, focused interfaces like `SSHConnection` ensure no class is forced to implement unused methods.
 
-Update ssh and check status
-> Terminal (Linux) :
-```bash
-sudo systemctl restart ssh
-sudo systemctl status ssh
-```
+Dependency Inversion Principle (DIP) :
 
-use `SSH` (Secure Shell) command to connect to a remote computer
-> Command Prompt (Windows) :
-```bash
-ssh -p <port> <username>@<ip address>
-ssh -p 22 lxnComputer@192.168.123.456
-```
-
-Shutdown server and disable port 22
-> Terminal (Linux) :
-```bash
-sudo ufw disable
-sudo ufw delete allow 22
-sudo systemctl disable ssh
-sudo systemctl stop ssh
-```
-
-**Note :**
-
-To copy a file from a Linux server to a Windows PC using command-line tools,</br>
-you can utilize `scp` (Secure Copy Protocol)
-> Command Prompt (Windows) :
-```bash
-scp <username>@<ip address>:/home/lxnComputer/directoryPath/sample.txt "C:\\Users\\winComputer\\directoryPath\\sample.txt"
-scp lnxComputer@192.168.123.456:/home/lxnComputer/Desktop/sample.txt "C:\\Users\\winComputer\\Desktop\\sample.txt"
-```
-
-To copy a directory with files from a Linux server to a Windows PC using command-line tools like scp,</br>
-you can utilize the `-r` option to recursively copy directories
-> Command Prompt (Windows) :
-```bash
-scp -r <username>@<ip address>:/home/lxnComputer/directoryPath/lxnDir "C:\\Users\\winComputer\\directoryPath\\winDir"
-scp -r lnxComputer@192.168.123.456:/home/lxnComputer/Documents/tutsh4x "C:\\Users\\winComputer\\Desktop\\tutsh4x"
-```
++ High-level modules (`SSHCommandExecutor` and `SFTPFileTransfer`) depend on abstractions (`SSHConnection`), not concrete classes.
